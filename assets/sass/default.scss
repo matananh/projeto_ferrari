@@ -26,3 +26,13 @@ hr {
     align-self: center;
   }
 }
+
+body main {
+  min-height: calc(100vh - 395px);
+}
+
+@media (min-width: 1200px) {
+  body main {
+    min-height: calc(100vh - 335px);
+  }
+}
