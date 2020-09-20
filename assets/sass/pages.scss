@@ -53,6 +53,20 @@ header {
         z-index: 3;
       }
     }
+    .photo {
+      padding: var(--space);
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      button {
+        @include button-green;
+      }
+    }
   }
   footer.fixed {
     width: 100%;
