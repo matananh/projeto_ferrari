@@ -27,7 +27,7 @@
       color: var(--white);
       &:houver {
         background-color: var(--white);
-        color: var(--white);
+        color: var(--black);
       }
     }
     > ul {
@@ -91,7 +91,6 @@
 @media (min-width: 1920px) {
   #home {
     > header {
-      max-width: initial;
       background-image: url('../images/ferrari-vermelha@2x.webp');
     }
   }

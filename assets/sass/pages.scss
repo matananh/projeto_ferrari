@@ -8,7 +8,7 @@ header {
     h1, h2, h3, h4, h5, h6 {
       color: var(--green);
       margin: 0;
-      font-size: 32px;
+      font-size: 23px;
       font-weight: 600;
     }
     hr {
@@ -42,29 +42,15 @@ header {
     }
   }
   > main {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     flex-direction: column;
     .toast {
       position: fixed;
       bottom: 0;
       left: 0;
+      z-index: 3;
       &.open {
         transform: translateY(-80px);
-        z-index: 3;
-      }
-    }
-    .photo {
-      padding: var(--space);
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      img {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
-      }
-      button {
-        @include button-green;
       }
     }
   }
@@ -109,11 +95,17 @@ header {
 }
 
 @media (min-width: 1200px) {
+  header {
+    &.page-title {
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 30px;
+      }
+    }
+  }
   .page {
-    height: calc(100vh - 175px);
     > header {
       justify-content: flex-start;
-      padding-left: 180px;
+      padding-left: 185px;
       min-height: 160px;
       h1 {
         font-size: 32px;
