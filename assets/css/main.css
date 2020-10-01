@@ -1321,6 +1321,72 @@ header.page-title hr {
     min-height: 245px;
   }
 }
+#error {
+  flex-direction: column;
+  padding: var(--space);
+  justify-content: center;
+  margin-top: 40px;
+}
+#error div {
+  flex-direction: column;
+  margin: 0;
+  height: initial;
+}
+#error div h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+#error div h1 b {
+  color: var(--red);
+}
+#error div span {
+  font-size: 20px;
+  color: var(--gray-0);
+}
+#error div > h1.desktop {
+  display: none;
+}
+#error picture img {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 578px) {
+  #error div {
+    height: initial;
+    min-height: initial;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #error {
+    flex-direction: row;
+  }
+  #error div {
+    flex-direction: column;
+  }
+  #error div h1.mobile {
+    display: none;
+  }
+  #error div h1.desktop {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) {
+  #error div {
+    flex-direction: column;
+  }
+  #error div > h1 {
+    font-size: 64px;
+  }
+  #error div h1.mobile {
+    display: none;
+  }
+  #error div h1.desktop {
+    display: flex;
+  }
+}
 #auth {
   min-width: 320px;
   width: 100vw;
@@ -1452,6 +1518,281 @@ header.page-title hr {
 }
 #change-password form .page-title {
   margin: 0;
+}
+
+#schedules {
+  flex-direction: column;
+}
+#schedules main > div {
+  flex-direction: column;
+}
+#schedules main > div ul {
+  margin: 0;
+  padding: 0 var(--space);
+  flex-direction: column;
+}
+#schedules main > div ul li {
+  flex-direction: column;
+}
+#schedules main > div ul li > section {
+  flex-wrap: wrap;
+}
+#schedules main > div ul li > section > div {
+  width: 50%;
+  flex-direction: column;
+}
+#schedules main > div ul li > section > div label {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark-0);
+  margin: 10px 0;
+}
+#schedules main > div ul li > section > div span {
+  font-size: 16px;
+  color: var(--dark-0);
+}
+#schedules main > div ul li button {
+  margin: var(--space) 0;
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  color: var(--black);
+  background-color: transparent;
+  background-color: var(--red);
+  color: var(--white);
+  max-width: 150px;
+  align-self: center;
+}
+#schedules main > div ul li button:hover {
+  background-color: var(--black-10);
+}
+#schedules main > div ul li button:active {
+  background-color: var(--black-75);
+}
+#schedules main > div ul li button:hover {
+  background-color: var(--red-hover);
+}
+#schedules main > div ul li button:active {
+  background-color: var(--red-active);
+}
+#schedules main > div ul li + li {
+  border-top: var(--gray-10) 2px solid;
+}
+#schedules main > footer {
+  justify-content: center;
+}
+#schedules main > footer a {
+  padding: 0 var(--space);
+}
+
+@media (min-width: 992px) {
+  #schedules main > div ul li {
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  #schedules main > div ul li > section {
+    flex-wrap: nowrap;
+    flex: 1;
+    max-width: 990px;
+  }
+  #schedules main > div ul li > section > div {
+    width: initial;
+    min-width: 200px;
+  }
+  #schedules main > div ul li > section > div label {
+    display: none;
+  }
+  #schedules main > div ul li > section > div.service {
+    flex: 1;
+  }
+  #schedules main > div ul li button {
+    align-self: flex-end;
+  }
+  #schedules main > div ul li:first-child > section > div label {
+    display: flex;
+  }
+  #schedules main > footer {
+    justify-content: flex-start;
+  }
+}
+#schedules-times-options {
+  flex-direction: column;
+}
+#schedules-times-options h3 {
+  margin: 0;
+  margin-bottom: var(--space);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#schedules-times-options .options {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#schedules-times-options .options label {
+  width: calc(50% - 10px);
+  margin-bottom: var(--space);
+}
+#schedules-times-options .options label span {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  color: var(--black);
+  background-color: transparent;
+  background-color: var(--gray-2);
+  color: var(--dark-0);
+  display: flex;
+  width: 100%;
+  background-color: var(--gray-10);
+  color: var(--dark-0);
+}
+#schedules-times-options .options label span:hover {
+  background-color: var(--black-10);
+}
+#schedules-times-options .options label span:active {
+  background-color: var(--black-75);
+}
+#schedules-times-options .options label span:hover {
+  background-color: var(--gray-3);
+}
+#schedules-times-options .options label span:active {
+  background-color: var(--gray-9);
+}
+#schedules-times-options .options label input {
+  display: none;
+}
+#schedules-times-options .options label input:checked + span {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  color: var(--black);
+  background-color: transparent;
+  background-color: var(--blue);
+  color: var(--white);
+}
+#schedules-times-options .options label input:checked + span:hover {
+  background-color: var(--black-10);
+}
+#schedules-times-options .options label input:checked + span:active {
+  background-color: var(--black-75);
+}
+#schedules-times-options .options label input:checked + span:hover {
+  background-color: var(--blue-hover);
+}
+#schedules-times-options .options label input:checked + span:active {
+  background-color: var(--blue-active);
+}
+
+@media (min-width: 992px) {
+  #schedules-times-options form {
+    max-width: 900px;
+  }
+  #schedules-times-options form h3 {
+    font-size: 23px;
+  }
+  #schedules-times-options form .options {
+    justify-content: flex-start;
+  }
+  #schedules-times-options form .options label {
+    width: calc(25% - var(--space));
+    margin-right: var(--space);
+  }
+  #schedules-times-options form footer.fixed {
+    justify-content: flex-start;
+  }
+  #schedules-times-options form footer.fixed button + button, #schedules-times-options form footer.fixed a + a, #schedules-times-options form footer.fixed button + a, #schedules-times-options form footer.fixed a + button {
+    margin-right: var(--space);
+  }
+  #schedules-times-options form footer.fixed button, #schedules-times-options form footer.fixed a {
+    order: 1;
+  }
+  #schedules-times-options form footer.fixed button:first-child, #schedules-times-options form footer.fixed a:first-child {
+    order: 2;
+  }
+}
+#schedules-services .options {
+  flex-direction: column;
+  margin-top: var(--space);
+}
+#schedules-services .options label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--space);
+}
+#schedules-services .options label .square {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--gray-10);
+  margin-right: var(--space);
+  justify-content: center;
+  align-items: center;
+}
+#schedules-services .options label .square .square2 {
+  width: 14px;
+  height: 14px;
+  background-color: var(--gray);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#schedules-services .options label .square .square2:hover {
+  opacity: 1;
+  background-color: var(--blue-active);
+}
+#schedules-services .options label .square:hover {
+  border: var(--gray-8) 2px solid;
+}
+#schedules-services .options label input {
+  display: none;
+}
+#schedules-services .options label input:checked + .square2 {
+  background-color: var(--blue-active);
+  opacity: 1;
+}
+#schedules-services .options label .content {
+  flex-direction: column;
+  padding-left: 10px;
+  font-size: 16px;
+  color: var(--dark-0);
+  line-height: 24px;
+}
+#schedules-services .options label .content .description {
+  font-size: 14px;
+  color: --gray-2;
+}
+#schedules-services .options label .content .price {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */

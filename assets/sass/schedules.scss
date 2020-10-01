@@ -1,0 +1,95 @@
+#schedules {
+  flex-direction: column;
+  main {
+    > div {
+      flex-direction: column;
+      ul {
+        margin: 0;
+        padding: 0 var(--space);
+        flex-direction: column;
+        li {
+          flex-direction: column;
+          > section {
+            flex-wrap: wrap;
+            > div {
+              width: 50%;
+              flex-direction: column;
+              label {
+                font-size: 16px;
+                font-weight: bold;
+                color: var(--dark-0);
+                margin: 10px 0;
+              }
+              span {
+                font-size: 16px;
+                color: var(--dark-0);
+              }
+            }
+          }
+          button {
+            margin: var(--space) 0;
+            @include button-red;
+            max-width: 150px;
+            align-self: center;
+          }
+        }
+        li + li {
+          border-top: var(--gray-10) 2px solid;
+        }
+      }
+    }
+    > footer {
+      justify-content: center;
+      a {
+        padding: 0 var(--space);
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #schedules {
+    main{
+      > div {
+        //margin-bottom: 80px;
+        ul {
+          li {
+            flex-direction: row;
+            justify-content: space-between;
+            width: fit-content;
+            > section {
+              flex-wrap: nowrap;
+              flex: 1;
+              max-width: 990px;
+              > div {
+                width: initial;
+                min-width: 200px;
+                label {
+                  display: none;
+                }
+                &.service {
+                  flex: 1;
+                }
+              }
+            }
+            button {
+              align-self: flex-end;
+            }
+            &:first-child {
+              > section {
+                > div {
+                  label {
+                    display: flex;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      > footer {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

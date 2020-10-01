@@ -1,0 +1,61 @@
+#schedules-times-options {
+  flex-direction: column;
+  h3 {
+    margin: 0;
+    margin-bottom: var(--space);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .options {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+      width: calc(50% - 10px);
+      margin-bottom: var(--space);
+      span {
+        @include button-gray;
+        display: flex;
+        width: 100%;
+        background-color: var(--gray-10) ;
+        color: var(--dark-0);
+      }
+      input {
+        display: none;
+        &:checked + span {
+          @include button-blue;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #schedules-times-options {
+    form {
+      max-width: 900px;
+      h3 {
+        font-size: 23px;
+      }
+      .options {
+        justify-content: flex-start;
+        label {
+          width: calc(25% - var(--space));
+          margin-right: var(--space);
+        }
+      }
+      footer.fixed {
+        justify-content: flex-start;
+        button + button, a + a, button + a, a + button {
+          margin-right: var(--space);
+        }
+        button, a {
+          order: 1;
+          &:first-child {
+            order: 2
+          }
+        }
+      }
+    }
+  }
+}
