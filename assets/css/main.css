@@ -1235,6 +1235,20 @@ header.page-title hr {
   #home .gallery {
     flex-direction: row;
   }
+  #home header > ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  #home header > ul li {
+    margin-left: var(--space);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 300;
+  }
+  #home header > ul h1 {
+    margin: 0;
+  }
 }
 @media (min-width: 1200px) {
   #home {
@@ -1243,9 +1257,22 @@ header.page-title hr {
   #home hr {
     top: 100px;
   }
-  #home > header {
+  #home header {
     max-width: initial;
     background-image: url("../images/ferrari-vermelha.webp");
+    padding-right: 100px;
+  }
+  #home header > ul li {
+    margin-left: 50px;
+  }
+  #home header h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+  }
+  #home header a {
+    font-size: 24px;
+    width: 200px;
   }
 }
 @media (min-width: 1920px) {
@@ -1969,6 +1996,100 @@ header.page-title hr {
 }
 #schedules-payment > main form .form-creditcard .form-card .faces .back {
   transform: rotateY(180deg);
+}
+
+@media (min-width: 1200px) {
+  #schedules-payment {
+    position: initial;
+  }
+  #schedules-payment > header {
+    min-height: 160px;
+    height: 160px;
+  }
+  #schedules-payment > header h1 {
+    display: flex;
+  }
+  #schedules-payment > main {
+    align-items: flex-start;
+    margin-bottom: 80px;
+  }
+  #schedules-payment > main form {
+    max-width: 900px;
+    justify-content: space-between;
+  }
+  #schedules-payment > main form .form-creditcard .form-fields {
+    max-width: 400px;
+  }
+  #schedules-payment > main form .form-creditcard .form-card {
+    position: static;
+    justify-content: center;
+    padding-left: var(--space);
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces {
+    width: 100%;
+    margin-top: -17px;
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces.flipped {
+    transform: translateX(-100px) rotateY(180deg);
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces svg {
+    width: 340px;
+  }
+}
+#schedules-payment-made main section {
+  flex-direction: column;
+  padding: 0 var(--space);
+}
+#schedules-payment-made main section span {
+  font-size: 22px;
+}
+#schedules-payment-made main section span.date {
+  margin-bottom: var(--space);
+}
+#schedules-payment-made main section span.card {
+  font-size: 16px;
+}
+#schedules-payment-made main footer {
+  justify-content: center;
+  align-items: center;
+}
+#schedules-payment-made main footer > a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  color: var(--black);
+  background-color: transparent;
+  background-color: var(--green);
+  color: var(--white);
+  padding: var(--space);
+}
+#schedules-payment-made main footer > a:hover {
+  background-color: var(--black-10);
+}
+#schedules-payment-made main footer > a:active {
+  background-color: var(--black-75);
+}
+#schedules-payment-made main footer > a:hover {
+  background-color: var(--green-hover);
+}
+#schedules-payment-made main footer > a:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 1200px) {
+  #schedules-payment-made main footer {
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

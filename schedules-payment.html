@@ -24,7 +24,7 @@
   <meta name="description" content="Conheça a Ferrari Auto Center" />
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body class="">
+<body class="" id="mobile">
   <header id="header" class="">
     <div class="overlay"></div>
     <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari" class="logo" /></a>
@@ -182,10 +182,10 @@
       }
     );
 
-    const btnMenu = document.querySelector('#btn-open, #btn-close');
+    const btnMenu = document.querySelector('#btn-open', '#btn-close', '.overlay');
       btnMenu.addEventListener('click', e=> {
-        const header = document.querySelector('#header');
-        header.classList.toggle('open-menu');
+        const body = document.querySelector('#mobile');
+        body.classList.toggle('open-menu');
       }
     );
   </script>

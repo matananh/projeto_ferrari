@@ -22,13 +22,14 @@
   <meta name="msapplication-TileImage" content="assets/images/ms-icon-144x144.png" />
   <meta name="theme-color" content="#E1DEDD" />
   <meta name="description" content="Conheça a Ferrari Auto Center" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preload" href="assets/css/main-min.css" as="style" />
+  <link rel="stylesheet" href="assets/css/main-min.css" />
 </head>
 <body class="">
   <header id="header">
     <div class="overlay"></div>
-    <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari" class="logo" /></a>
-    <button type="button" id="btn-open">
+    <a href="/index.html#home"><img src="assets/images/ferrari-logo.svg" alt="Logo Ferrari" class="logo" /></a>
+    <button type="button" id="btn-open" aria-label="Abrir Menu">
       <svg id="menu-black-18dp" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
         <path id="Caminho_215" data-name="Caminho 215" d="M0,0H32V32H0Z" fill="none"/>
         <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)"/>
@@ -36,31 +37,31 @@
     </button>
     <div class="menu">
       <nav>
-        <button type="button" id="btn-close">
+        <button type="button" id="btn-close" aria-label="Fechar Menu">
           <svg id="close-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path id="Caminho_244" data-name="Caminho 244" d="M0,0H24V24H0Z" fill="none"/>
             <path id="Caminho_245" data-name="Caminho 245" d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"/>
           </svg>
         </button>
         <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#service">Revisão</a></li>
-          <li><a href="index.html#contact">Contato</a></li>
+          <li><a href="/index.html#home">Home</a></li>
+          <li><a href="/index.html#service">Revisão</a></li>
+          <li><a href="/index.html#contact">Contato</a></li>
           <li class="divider"><hr /></li>
-          <li class="hide-guest"><a href="schedules.html">Agendamento</a></li>
-          <li class="hide-guest"><a href="profile.html">Editar Dados</a></li>
-          <li class="hide-guest"><a href="change-photo.html">Mudar Foto</a></li>
-          <li class="hide-guest"><a href="change-password.html">Alterar Senha</a></li>
+          <li class="hide-guest"><a href="/schedules.html">Agendamento</a></li>
+          <li class="hide-guest"><a href="/profile.html">Editar Dados</a></li>
+          <li class="hide-guest"><a href="/change-photo.html">Mudar Foto</a></li>
+          <li class="hide-guest"><a href="/change-password.html">Alterar Senha</a></li>
         </ul>
       </nav>
       <div class="footer">
         <hr />
         <div>
           <picture>
-            <a href="profile.html"><img src="assets/images/user.png" alt="João Rangel" /></a>
+            <a href="/profile.html"><img src="assets/images/user.png" alt="João Rangel" /></a>
           </picture>
           <div>
-            <a href="profile.html">
+            <a href="/profile.html">
               <strong>João Rangel</strong>
               <small>joaohcrangel@gmail.com</small>
             </a>
@@ -69,7 +70,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
           </button>
         </div>
-        <a href="auth.html" class="btn-register">Minha Conta</a>
+        <a href="/auth.html" class="btn-register">Minha Conta</a>
       </div>
     </div>
     <hr class="italy" />
@@ -101,8 +102,8 @@
 
       <figure>
         <picture>
-          <source srcset="assets/images/ferrari-interior.webp" type="image/webp" />
-          <img src="assets/images/ferrari-interior.png" alt="Ferrari Interior" />
+          <source srcset="/assets/images/ferrari-interior.webp" type="image/webp" />
+          <img src="/assets/images/ferrari-interior.png" alt="Ferrari Interior" />
         </picture>
         <figcaption>
           <h2>Esportivas</h2>
@@ -112,8 +113,8 @@
 
       <figure>
         <picture>
-          <source srcset="assets/images/ferrari-azul.webp" type="image/webp" />
-          <img src="assets/images/ferrari-azul.png" alt="Ferrari Azul" />
+          <source srcset="/assets/images/ferrari-azul.webp" type="image/webp" />
+          <img src="/assets/images/ferrari-azul.png" alt="Ferrari Azul" />
         </picture>
         <figcaption>
           <h2>Esportivas</h2>
@@ -128,23 +129,23 @@
       <div>
         <div class="icons">
           <figure>
-            <img src="assets/images/calendar.svg" alt="Escolha Data e Hora">
+            <img src="/assets/images/calendar.svg" alt="Escolha Data e Hora">
             <figcaption>Escolha Data e Hora</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/tools.svg" alt="Escolha o Serviço">
+            <img src="/assets/images/tools.svg" alt="Escolha o Serviço">
             <figcaption>Escolha o Serviço</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/payments.svg" alt="Pague Online">
+            <img src="/assets/images/payments.svg" alt="Pague Online">
             <figcaption>Pague Online</figcaption>
           </figure>
         </div>
   
-        <a href="schedules-new.html">Agendar Serviço</a>
+        <a href="/schedules-new.html">Agendar Serviço</a>
       </div>
 
-      <img src="assets/images/services.svg" alt="Serviços">
+      <img src="/assets/images/services.svg" alt="Serviços">
 
     </section>
 
@@ -187,22 +188,22 @@
       
       <ul class="contacts">
         <li>
-          <img src="assets/images/icon-google-place.svg" alt="Icon Location">
+          <img src="/assets/images/icon-google-place.svg" alt="Icon Location">
           <p class="title">OUR HEADQUARTERS</p>
           <p>Modena, Itália</p>
         </li>
         <li>
-          <img src="assets/images/icon-phone.svg" alt="Icon Phone">
+          <img src="/assets/images/icon-phone.svg" alt="Icon Phone">
           <p class="title">SPEAK TO US</p>
           <p>(123) 456 7890</p>
         </li>
         <li>
-          <img src="assets/images/icon-skype.svg" alt="Icon Skype">
+          <img src="/assets/images/icon-skype.svg" alt="Icon Skype">
           <p class="title">MAKE A VIDEO CALL</p>
           <p>FerrariOnSkype</p>
         </li>
         <li>
-          <img src="assets/images/icon-twitter.svg" alt="Icon Twitter">
+          <img src="/assets/images/icon-twitter.svg" alt="Icon Twitter">
           <p class="title">FOLLOW ON TWITTER</p>
           <p>2.3M Followers</p>
         </li>
@@ -212,29 +213,29 @@
   </main>
 
   <footer id="footer">
-    <button type="button">
+    <button type="button" aria-label="Subir sub menu">
       <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
     </button>
     <div class="columns">
       <div>
         <ul class="links">
           <li class="title">Links</li>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#schedules">Revisão</a></li>
-          <li><a href="index.html#contact">Contato</a></li>
+          <li><a href="/index.html#home">Home</a></li>
+          <li><a href="/index.html#schedules">Revisão</a></li>
+          <li><a href="/index.html#contact">Contato</a></li>
         </ul>
         <ul>
           <li class="title">Contato</li>
           <li>Email:&nbsp;<a href="mailto:support@ferrari.it">support@ferrari.it</a></li>
           <li class="social">
-            <a href="#"><img src="assets/images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="assets/images/twitter.svg" alt="Twitter"></a>
-            <a href="#"><img src="assets/images/youtube.svg" alt="Youtube"></a>
-            <a href="#"><img src="assets/images/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="/assets/images/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="/assets/images/twitter.svg" alt="Twitter"></a>
+            <a href="#"><img src="/assets/images/youtube.svg" alt="Youtube"></a>
+            <a href="#"><img src="/assets/images/instagram.svg" alt="Instagram"></a>
           </li>
         </ul>
       </div>
-      <a href="#" class="logo-footer"><img src="assets/images/ferrari-footer.svg" alt="Logo Ferrari"></a>
+      <a href="#" class="logo-footer"><img src="/assets/images/ferrari-footer.svg" alt="Logo Ferrari"></a>
     </div>
     <p>2020 © Hcode. All rights reserved.</p>
   </footer>

@@ -1,0 +1,35 @@
+#schedules-payment-made {
+  main {
+    section {
+      flex-direction: column;
+      padding: 0 var(--space);
+      span {
+        font-size: 22px;
+        &.date {
+          margin-bottom: var(--space);
+        }
+        &.card {
+          font-size: 16px;
+        }
+      }
+    }
+    footer {
+      justify-content: center;
+      align-items: center;
+      > a {
+        @include button-green;
+        padding: var(--space);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #schedules-payment-made {
+    main {
+      footer {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
