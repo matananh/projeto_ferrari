@@ -30,7 +30,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #schedules-times-options {
     form {
       max-width: 900px;
@@ -42,18 +42,6 @@
         label {
           width: calc(25% - var(--space));
           margin-right: var(--space);
-        }
-      }
-      footer.fixed {
-        justify-content: flex-start;
-        button + button, a + a, button + a, a + button {
-          margin-right: var(--space);
-        }
-        button, a {
-          order: 1;
-          &:first-child {
-            order: 2
-          }
         }
       }
     }

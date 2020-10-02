@@ -2,7 +2,6 @@
   flex-direction: column;
   padding: 0 var(--space);
   margin-bottom: var(--space);
-  max-width: 839px;
   .month {
     justify-content: space-between;
     align-items: center;
@@ -16,6 +15,7 @@
     button {
       @include button;
       border: var(--gray-2) 2px solid;
+      border-radius: var(--border-radius);
       color: var(--gray-2);
     }
     nav{
@@ -52,6 +52,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 12vw);
+    grid-gap: 10px;
     color: var(--dark-0);
     li {
       justify-content: center;
@@ -91,8 +92,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .calendar {
+    max-width: 992px;
     .month {
       margin: var(--space) 0;
       h2 {
@@ -109,7 +111,7 @@
       }
     }
     .days {
-      grid-template-rows: repeat(5, calc(839px / 7));
+      grid-template-rows: repeat(5, calc(992px / 7));
       li {
         font-size: 38px;
       }

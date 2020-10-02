@@ -238,5 +238,14 @@
     </div>
     <p>2020 © Hcode. All rights reserved.</p>
   </footer>
+
+  <script>
+    const btnMenu = document.querySelector('#btn-open', '#btn-close');
+      btnMenu.addEventListener('click', e=> {
+        const header = document.querySelector('#header');
+        header.classList.toggle('open-menu');
+      }
+    );
+  </script>
 </body>
 </html>

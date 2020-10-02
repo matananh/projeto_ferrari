@@ -107,5 +107,14 @@
       </form>
     </main>
   </section>
+
+  <script>
+    const btnMenu = document.querySelector('#btn-open', '#btn-close');
+      btnMenu.addEventListener('click', e=> {
+        const header = document.querySelector('#header');
+        header.classList.toggle('open-menu');
+      }
+    );
+  </script>
 </body>
 </html>

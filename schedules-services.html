@@ -80,7 +80,7 @@
     </header>
 
     <main>
-      <form>
+      <form action="schedules-payment.html">
         <div class="options">
           <label>
             <input type="checkbox" name="service" value="1" checked />
@@ -116,7 +116,7 @@
             </div>
             <div class="content">
               <span class="name">Filtros</span>
-              <span class="descripition">Alinhamento e balanceamento.</span>
+              <span class="descripition">Troca do filtro de ar e combustível.</span>
               <span class="price">R$: 200,00</span>
             </div>
           </label>
@@ -128,6 +128,83 @@
         </footer>
       </form>
     </main>
+    <aside id="btn-aside">
+      <header>Resumo</header>
+      <section>
+        <table>
+          <tbody>
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 0,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer>
+        <button type="button" id="button-open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+        </button>
+        <div>
+          <span>Total</span>
+          <span class="total">R$: 0,00</span>
+        </div>
+      </footer>
+    </aside>
   </section>
+  <script>
+    const button = document.querySelector('#button-open');
+      button.addEventListener('click', e=> {
+        const btn = document.querySelector('#btn-aside');
+        btn.classList.toggle('open');
+      }
+    );
+
+    const btnMenu = document.querySelector('#btn-open, #btn-close');
+      btnMenu.addEventListener('click', e=> {
+        const header = document.querySelector('#header');
+        header.classList.toggle('open-menu');
+      }
+    );
+  </script>
 </body>
 </html>

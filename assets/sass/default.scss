@@ -13,7 +13,7 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 body {
   margin: 0;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: var(--bg-color);
   > main {
     min-height: calc(100vh - 400px);
   }

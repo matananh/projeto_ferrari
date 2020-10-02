@@ -74,87 +74,83 @@
     </div>
     <hr class="italy" />
   </header>
-  <section class="page blue" id="schedules-new">
+  <section class="page blue" id="schedules-summary">
     <header>
-      <h1>Escolha Data</h1>
+      <div>
+        <h1>RESUMO DO PEDIDO<small>CONFIRA OS DETALHES DO PEDIDO</small></h1>
+      </div>
     </header>
 
     <main>
-      <div class="calendar">
-        <div class="month">
-          <button type="button" class="btn-today">Hoje</button>
-
-          <h2>Junho 2020</h2>
-
-          <nav>
-            <button type="button" class="btn-prev">
-              <img src="assets/images/arrow-left.svg" alt="Botão Voltar" />
-            </button>
-            <button type="button" class="btn-next">
-              <img src="assets/images/arrow-right.svg" alt="Botão Avançar" />
-            </button>
-          </nav>
+      <form action="">
+        <div class="field">
+          <input type="text" name="payment" id="payment" readonly value="Cartão de Crédito" />
+          <label for="payment">Forma de Pagamento</label>
         </div>
 
-        <ul class="weekdays">
-          <li>Dom</li>
-          <li>Seg</li>
-          <li>Ter</li>
-          <li>Quar</li>
-          <li>Qui</li>
-          <li>Sex</li>
-          <li>Sáb</li>
-        </ul>
+        <div class="field">
+          <input type="text" name="creditcard" id="creditcard" readonly value="***0604" />
+          <label for="creditcard">Cartão Final</label>
+        </div>
 
-        <ul class="days">
-          <li class="month-prev">28</li>
-          <li class="month-prev">29</li>
-          <li class="month-prev">30</li>
-          <li>1</li>
-          <li class="active">2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li class="selected">10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-          <li>31</li>
-          <li class="month-next">1</li>
-        </ul>
-      </div>
-      <form action="schedules-time-options.html">
+        <div class="field">
+          <input type="text" name="installments" id="installments" readonly value="À vista" />
+          <label for="installments">Parcelas</label>
+        </div>
+
+        <div class="field">
+          <input type="text" name="services" id="services" readonly value="1" />
+          <label for="services">Quantidade de Serviços</label>
+        </div>
+
+        <div class="field">
+          <input type="text" name="schedule_at" id="schedule_at" readonly value="01 de outubro de 2020 às 9:00" />
+          <label for="schedule_at">Data do Serviço</label>
+        </div>
+
+        <div class="field">
+          <input type="text" name="total" id="total" readonly value="R$ 400,00" />
+          <label for="total">Valor Total</label>
+        </div>
+
         <footer class="fixed">
-          <a href="schedules.html">Voltar</a>
+          <a href="schedules-payment.html">Voltar</a>
           <button type="submit">Continuar</button>
         </footer>
       </form>
     </main>
+    <aside id="btn-aside">
+      <header>Resumo</header>
+      <section>
+        <table>
+          <tbody>
+            <tr>
+              <td>Alinhamento</td>
+              <td class="price">R$: 400,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer>
+        <button type="button" id="button-open">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+        </button>
+        <div>
+          <span>Total</span>
+          <span class="total">R$: 0,00</span>
+        </div>
+      </footer>
+    </aside>
   </section>
-  
   <script>
-    const btnMenu = document.querySelector('#btn-open', '#btn-close');
+    const button = document.querySelector('#button-open');
+      button.addEventListener('click', e=> {
+        const btn = document.querySelector('#btn-aside');
+        btn.classList.toggle('open');
+      }
+    );
+
+    const btnMenu = document.querySelector('#btn-open, #btn-close');
       btnMenu.addEventListener('click', e=> {
         const header = document.querySelector('#header');
         header.classList.toggle('open-menu');
