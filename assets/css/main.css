@@ -597,6 +597,9 @@ header.page-title hr {
     font-size: 30px;
   }
 
+  .page {
+    margin-bottom: 80px;
+  }
   .page aside, .page aside.open {
     width: 375px;
     height: calc(100vh - 118px);
